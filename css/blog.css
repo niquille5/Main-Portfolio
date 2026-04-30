@@ -1,0 +1,48 @@
+/* Zet de blogtekst en de zijbalk naast elkaar. */
+.blog-wrapper {
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+/* Groot wit blok met de blogtekst. */
+.blog-container {
+  flex: 3;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Klein wit blok aan de zijkant met extra info. */
+.blog-sidebar {
+  flex: 1;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  color: #0f172a;
+}
+
+.blog-container h2 {
+  color: #0f172a;
+}
+
+/* Maakt de tekst iets zachter dan zwart. */
+.blog-container p,
+.blog-sidebar p {
+  color: #334155;
+}
+
+/* Op kleine schermen komt de zijbalk onder de blogtekst. */
+@media (max-width: 900px) {
+  .blog-wrapper {
+    flex-direction: column;
+  }
+}

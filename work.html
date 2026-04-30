@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projecten | Imanredjo Nequille</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/work.css">
+</head>
+
+<body>
+
+  <!-- nav Buttons top page -->
+  <nav class="main-nav" aria-label="Hoofdnavigatie">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="work.html" class="active">Projecten</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main class="work-wrapper">
+
+    <!-- Dit is het grote blok met alle projectinformatie. -->
+    <section class="work-container">
+
+      <p class="eyebrow">Project case study</p>
+      <h2>Slimme lichtschakelaar met ESP32</h2>
+
+      <p>
+        In teamverband ontwikkelde ik een slimme lichtschakelaar die met handgebaren werkt via sensoren en een ESP32.
+        Dit project laat zien hoe ik hardware en software combineer om een praktische oplossing te bouwen.
+      </p>
+
+      <!-- ESP32 Project -->
+      <div class="project-cards">
+        <article class="project-card">
+          <img src="img/All/Project1.jpg.jpeg" alt="Slimme lichtschakelaar project met ESP32 - prototype foto 1">
+          <div class="project-card-content">
+            <h3>Prototype</h3>
+            <p>We bouwden een eerste werkende opstelling met sensoren, bekabeling en ESP32-aansturing.</p>
+            <div class="skill-list compact">
+              <span class="skill-badge">ESP32</span>
+              <span class="skill-badge">Sensoren</span>
+              <span class="skill-badge">Prototype</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="img/All/Project2.jpg.jpeg" alt="Slimme lichtschakelaar project met ESP32 - testopstelling foto 2">
+          <div class="project-card-content">
+            <h3>Testen</h3>
+            <p>Door te testen zagen we hoe afstand, timing en sensorwaarden invloed hadden op het schakelen.</p>
+            <div class="skill-list compact">
+              <span class="skill-badge">Debugging</span>
+              <span class="skill-badge">Testen</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="img/All/Project3.jpg.jpeg" alt="Slimme lichtschakelaar project met ESP32 - eindresultaat foto 3">
+          <div class="project-card-content">
+            <h3>Resultaat</h3>
+            <p>Het eindresultaat reageert op handgebaren en toont hoe techniek dagelijkse handelingen slimmer kan maken.</p>
+            <div class="skill-list compact">
+              <span class="skill-badge">Hardware</span>
+              <span class="skill-badge">Software</span>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- ESP32 details -->
+      <section class="project-details" aria-label="Projectdetails">
+        <div>
+          <h3>Probleem</h3>
+          <p>Een normale lichtschakelaar vraagt fysiek contact. Wij wilden onderzoeken hoe licht contactloos bediend kan worden.</p>
+        </div>
+
+        <div>
+          <h3>Oplossing</h3>
+          <p>Met sensoren en een ESP32 maakten we een prototype dat handbewegingen detecteert en daarop reageert.</p>
+        </div>
+
+        <div>
+          <h3>Mijn rol</h3>
+          <p>Ik werkte mee aan het testen, verbeteren en uitleggen van de technische werking binnen het team.</p>
+        </div>
+
+        <div>
+          <h3>Wat ik leerde</h3>
+          <p>Ik leerde beter logisch denken, testen met echte hardware en samenwerken aan een technische oplossing.</p>
+        </div>
+      </section>
+
+    </section>
+
+  </main>
+
+  <!-- Zoomin fotos -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="closeBtn" type="button" aria-label="Sluit afbeelding">&times;</button>
+    <img id="lightbox-img" alt="Vergrote projectafbeelding">
+  </div>
+
+  <!-- Footer bottom page -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; All Rights Reserved</p>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="work.html">Projecten</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/niquille5" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:niquille5@gmail.com">Email</a>
+        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/5978734186" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link JS. -->
+  <script src="js/work.js"></script>
+
+</body>
+
+</html>

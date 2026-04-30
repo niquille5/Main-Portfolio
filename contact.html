@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Imanredjo Nequille</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+  <!-- nav Buttons top page -->
+  <nav class="main-nav" aria-label="Hoofdnavigatie">
+    <a href="index.html">Home</a>
+    <a href="blog.html">Blog</a>
+    <a href="work.html">Projecten</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+
+  <main class="contact-page">
+    <!-- Contactinformatie -->
+    <section class="contact-container">
+
+      <p class="eyebrow">Contact</p>
+      <h2>Laten we praten</h2>
+      <p>Stuur een bericht of bereik mij via mijn profielen.</p>
+
+      <div class="socials">
+        <a class="social-link" href="https://github.com/niquille5" target="_blank" rel="noopener">
+          <img src="img/logo.png/github.png" alt="GitHub logo">
+          <span>GitHub</span>
+        </a>
+
+        <a class="social-link" href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener">
+          <img src="img/logo.png/linkedin.png" alt="LinkedIn logo">
+          <span>LinkedIn</span>
+        </a>
+
+        <a class="social-link" href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener">
+          <img src="img/logo.png/instagram.png" alt="Instagram logo">
+          <span>@nicck_k_k</span>
+        </a>
+
+        <a class="social-link" href="https://wa.me/5978734186" target="_blank" rel="noopener">
+          <img src="img/logo.png/whatsapp.png" alt="WhatsApp logo">
+          <span>+597 8734186</span>
+        </a>
+
+        <a class="social-link" href="mailto:niquille5@gmail.com">
+          <img src="img/logo.png/gmail.png" alt="Email logo">
+          <span>niquille5@gmail.com</span>
+        </a>
+      </div>
+
+      <a class="btn download-link" href="cv/CV_Imanredjo_Nequille_Professioneel.docx" download>Download CV</a>
+    </section>
+
+    <!-- contactformulier -->
+    <section class="contact-container">
+      <p class="eyebrow">Bericht</p>
+      <h2>Contactformulier</h2>
+
+      <form
+        class="contact-form"
+        id="contactForm"
+        data-email="niquille5@gmail.com"
+        data-emailjs-public-key="iXdiBXTpEx3Oxk92t"
+        data-emailjs-service-id="service_2kf1x1c"
+        data-emailjs-template-id="template_0nfphg6"
+      >
+        <input type="hidden" name="time" id="messageTime">
+
+        <label for="name">Naam</label>
+        <input type="text" id="name" name="name" placeholder="Jouw naam" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="jouw@email.com" required>
+
+        <label for="message">Bericht</label>
+        <textarea id="message" name="message" rows="5" placeholder="Schrijf je bericht..." required></textarea>
+
+        <button type="submit">Verstuur bericht</button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer bottom page -->
+  <footer class="footer">
+    <div class="footer-content">
+      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; All Rights Reserved</p>
+
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="work.html">Projecten</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/niquille5" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:niquille5@gmail.com">Email</a>
+        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/5978734186" target="_blank" rel="noopener">WhatsApp</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Link JS. -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+
+</html>

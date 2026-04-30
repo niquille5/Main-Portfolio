@@ -1,0 +1,126 @@
+/* Zet de contactblokken naast elkaar. */
+.contact-page {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.85fr) minmax(320px, 1.15fr);
+  gap: 24px;
+  max-width: 1120px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+/* Wit blok voor contactinfo of formulier. */
+.contact-container {
+  padding: 40px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.contact-container p {
+  margin-bottom: 22px;
+  color: #334155;
+}
+
+/* Lijst met social/contact links. */
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Een losse contactlink met icoon. */
+.social-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #0f172a;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Zorgt dat de iconen even groot blijven. */
+.social-link img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+/* Contactlink beweegt iets omhoog als je erover gaat. */
+.social-link:hover {
+  background: #e2e8f0;
+  transform: translateY(-3px);
+}
+
+/* De CV-knop is net zo breed als het blok. */
+.download-link {
+  width: 100%;
+  margin-top: 22px;
+}
+
+/* Formulier staat netjes onder elkaar. */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form label {
+  color: #0f172a;
+  font-weight: 800;
+}
+
+/* Velden waar je tekst invult. */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font: inherit;
+  color: #0f172a;
+  background: #f8fafc;
+}
+
+/* Blauwe rand als je in een veld klikt. */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 3px solid rgba(59, 130, 246, 0.22);
+  border-color: #3b82f6;
+  background: #ffffff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+
+/* Statusbericht onder de verzendknop. */
+.form-status {
+  min-height: 24px;
+  margin: 4px 0 0;
+  font-weight: 700;
+}
+
+.form-status.success {
+  color: #166534;
+}
+
+.form-status.error {
+  color: #b91c1c;
+}
+
+/* Op kleine schermen komen de twee contactblokken onder elkaar. */
+@media (max-width: 850px) {
+  .contact-page {
+    grid-template-columns: 1fr;
+    margin: 30px auto;
+  }
+
+  .contact-container {
+    padding: 28px 22px;
+  }
+}

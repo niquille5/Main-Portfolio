@@ -1,0 +1,270 @@
+/* Alles begint zonder standaard marge of padding van de browser. */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Basisstijl voor de hele website. */
+body {
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+/* Menu bovenaan de pagina's. */
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main-nav a {
+  text-decoration: none;
+  background: #0f172a;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Menu-link beweegt iets omhoog als je erover gaat. */
+.main-nav a:hover {
+  background: #1e293b;
+  transform: translateY(-3px);
+}
+
+/* Laat zien welke pagina actief is. */
+.main-nav a.active {
+  background: #3b82f6;
+}
+
+/* Algemene knopstijl. */
+button,
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 18px;
+  border: none;
+  background: #0f172a;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover,
+.btn:hover {
+  transform: translateY(-3px);
+  background: #1e293b;
+}
+
+/* Lichte knopvariant. */
+.btn-secondary {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-secondary:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+/* Knop met alleen een rand. */
+.btn-outline {
+  background: transparent;
+  color: #0f172a;
+  border: 1px solid #94a3b8;
+}
+
+.btn-outline:hover {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+/* Kleine blauwe tekst boven een titel. */
+.eyebrow {
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Lijst met skills zoals HTML, CSS en JavaScript. */
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-list.compact {
+  gap: 8px;
+}
+
+/* Los skill-label. */
+.skill-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 11px;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Homepagina: links foto, rechts tekst. */
+.homepage {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Linkerkant met de profielfoto. */
+.left {
+  flex: 1;
+  background: url("../img/All/Nickkk.jpg") center/cover no-repeat;
+}
+
+/* Rechterkant met de tekst. */
+.right {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #ffffff, #e2e8f0);
+}
+
+/* Zachte achtergrondafbeelding achter de tekst. */
+.right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../img/All/cherry-blossom.png") center/cover no-repeat;
+  opacity: 0.18;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Zorgt dat tekst boven de achtergrondafbeelding blijft. */
+.right > * {
+  position: relative;
+  z-index: 2;
+}
+
+.right h1 {
+  font-size: clamp(38px, 6vw, 66px);
+  line-height: 1;
+}
+
+.right h2 {
+  max-width: 620px;
+  color: #334155;
+  font-size: 24px;
+}
+
+.right p:not(.eyebrow) {
+  max-width: 620px;
+  color: #334155;
+}
+
+/* Knoppen naast elkaar, maar ze mogen naar een nieuwe regel. */
+.cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.right .main-nav {
+  justify-content: flex-start;
+  padding: 10px 0 0;
+}
+
+/* Onderkant van elke pagina. */
+.footer {
+  background: #0f172a;
+  color: #ffffff;
+  text-align: center;
+  padding: 28px 20px;
+  margin-top: 50px;
+}
+
+.homepage + .footer {
+  margin-top: 0;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer a {
+  color: #93c5fd;
+  text-decoration: none;
+  margin: 0 8px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Op kleine schermen komt alles onder elkaar te staan. */
+@media (max-width: 800px) {
+  .homepage {
+    flex-direction: column;
+  }
+
+  .left {
+    min-height: 45vh;
+  }
+
+  .right {
+    padding: 36px 24px;
+  }
+
+  .right h1 {
+    font-size: 42px;
+  }
+
+  .main-nav,
+  .right .main-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  .right .main-nav {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .main-nav a {
+    padding: 9px 14px;
+  }
+}
