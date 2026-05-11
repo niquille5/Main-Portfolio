@@ -1,155 +1,415 @@
-/* Houdt de projectpagina netjes in het midden. */
 .work-wrapper {
-  max-width: 1120px;
-  margin: 50px auto;
-  padding: 0 20px;
+  padding-bottom: 86px;
 }
 
-/* Groot wit blok met alle projectinformatie. */
-.work-container {
-  background: #ffffff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+.work-hero {
+  max-width: 900px;
+}
+
+.project-overview {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.overview-card {
+  min-height: 150px;
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(29, 78, 216, 0.08), transparent 55%),
+    var(--surface);
+  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.05);
+  text-decoration: none;
+  transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
 }
 
-/* Titel en intro van het project. */
-.work-container h2 {
-  font-size: 32px;
-  color: #0f172a;
+body.dark-mode .overview-card {
+  background:
+    linear-gradient(135deg, rgba(96, 165, 250, 0.12), transparent 55%),
+    var(--surface);
 }
 
-.work-container > p:not(.eyebrow) {
-  max-width: 780px;
-  font-size: 16px;
-  line-height: 1.8;
-  color: #334155;
-  margin: 0;
+.overview-card:hover {
+  border-color: #b9c8d9;
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
 }
 
-/* Zet de projectkaarten naast elkaar. */
+.overview-card span {
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.overview-card strong {
+  color: var(--ink);
+  font-size: 24px;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.overview-card small {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.work-container {
+  display: grid;
+  gap: 24px;
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 14px 34px rgba(17, 24, 39, 0.05);
+}
+
+body.dark-mode .work-container {
+  background: rgba(17, 24, 39, 0.46);
+}
+
+.project-section-title {
+  max-width: 720px;
+}
+
+.project-section-title h2 {
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.project-section-title p:not(.eyebrow) {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 17px;
+  text-wrap: pretty;
+}
+
 .project-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 8px;
+  gap: 20px;
+  align-items: stretch;
 }
 
 .project-card {
+  position: relative;
   overflow: hidden;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--line);
   border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: var(--surface);
+  box-shadow: 0 12px 34px rgba(17, 24, 39, 0.06);
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Als je over een kaart gaat, komt die iets omhoog. */
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 0 rgba(29, 78, 216, 0);
+  transition: box-shadow 0.24s ease;
+}
+
 .project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.12);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
 }
 
-/* Projectfoto's krijgen allemaal dezelfde hoogte. */
+.project-card:hover::after {
+  box-shadow: inset 0 0 0 2px rgba(29, 78, 216, 0.16);
+}
+
 .project-card img {
   width: 100%;
-  height: 210px;
-  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  height: auto;
   display: block;
+  object-fit: contain;
+  padding: 12px;
+  background:
+    linear-gradient(135deg, rgba(29, 78, 216, 0.08), transparent),
+    #f8fafc;
   cursor: pointer;
+  border-bottom: 1px solid var(--line);
+  transition: transform 0.28s ease;
+}
+
+body.dark-mode .project-card img {
+  background:
+    linear-gradient(135deg, rgba(96, 165, 250, 0.12), transparent),
+    #0f172a;
+}
+
+.project-card:hover img {
+  transform: scale(1.015);
 }
 
 .project-card-content {
+  flex: 1;
+  min-height: 220px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 18px;
+  padding: 22px;
+}
+
+.project-card-content .skill-list {
+  margin-top: auto;
 }
 
 .project-card-content h3 {
-  color: #0f172a;
-  font-size: 20px;
+  color: var(--ink);
+  font-size: 22px;
+  line-height: 1.2;
 }
 
 .project-card-content p {
-  color: #334155;
-  line-height: 1.65;
+  color: var(--muted);
+  text-wrap: pretty;
 }
 
-/* Vier kleine blokken met extra uitleg over het project. */
 .project-details {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 8px;
+  gap: 18px;
 }
 
 .project-details div {
-  padding: 18px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  padding: 22px;
+  border: 1px solid var(--line);
   border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 10px 28px rgba(17, 24, 39, 0.04);
 }
 
 .project-details h3 {
   margin-bottom: 8px;
-  color: #0f172a;
+  color: var(--ink);
   font-size: 18px;
 }
 
 .project-details p {
-  color: #334155;
-  line-height: 1.65;
+  color: var(--muted);
 }
 
-/* Donkere popup die een projectfoto groot laat zien. */
+.future-projects {
+  margin-top: 42px;
+  padding: clamp(22px, 4vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.58);
+  box-shadow: 0 14px 34px rgba(17, 24, 39, 0.05);
+}
+
+body.dark-mode .future-projects {
+  background: rgba(17, 24, 39, 0.46);
+}
+
+.section-heading {
+  max-width: 760px;
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.section-heading p:not(.eyebrow) {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 17px;
+}
+
+.custom-project-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.75fr);
+  gap: 24px;
+  padding: clamp(24px, 4vw, 34px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(29, 78, 216, 0.05), transparent 48%),
+    var(--surface);
+  box-shadow: none;
+}
+
+body.dark-mode .custom-project-card {
+  background:
+    linear-gradient(135deg, rgba(96, 165, 250, 0.1), transparent 48%),
+    var(--surface);
+}
+
+.custom-project-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.project-status {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(29, 78, 216, 0.09);
+  color: var(--accent-dark);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+body.dark-mode .project-status {
+  background: rgba(96, 165, 250, 0.14);
+}
+
+.custom-project-copy h3 {
+  color: var(--ink);
+  font-size: clamp(26px, 4vw, 38px);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.custom-project-copy p {
+  max-width: 680px;
+  color: var(--muted);
+  font-size: 17px;
+  text-wrap: pretty;
+}
+
+.custom-project-meta {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.custom-project-meta div {
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+body.dark-mode .custom-project-meta div {
+  background: rgba(15, 23, 42, 0.72);
+}
+
+.custom-project-meta strong,
+.custom-project-meta span {
+  display: block;
+}
+
+.custom-project-meta strong {
+  color: var(--ink);
+  font-size: 14px;
+}
+
+.custom-project-meta span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.smyle-gallery {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(2, minmax(0, 0.8fr));
+  gap: 18px;
+  margin-top: 22px;
+}
+
+.smyle-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  display: block;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 12px 30px rgba(17, 24, 39, 0.06);
+  cursor: pointer;
+  transition: transform 0.24s ease, box-shadow 0.24s ease;
+}
+
+.smyle-gallery img:first-child {
+  grid-row: span 2;
+  height: 100%;
+}
+
+.smyle-gallery img:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+
+.smyle-details {
+  margin-top: 20px;
+}
+
+.smyle-details div {
+  background:
+    linear-gradient(180deg, rgba(34, 197, 94, 0.06), transparent),
+    var(--surface);
+}
+
 .lightbox {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  display: none;
-  justify-content: center;
-  align-items: center;
+  inset: 0;
   z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(8, 13, 23, 0.92);
 }
 
-/* De grote foto in de popup. */
 .lightbox img {
   max-width: 90%;
-  max-height: 80%;
+  max-height: 82%;
   border-radius: 8px;
 }
 
-/* Sluitknop van de popup. */
 #closeBtn {
   position: absolute;
   top: 20px;
   right: 30px;
   width: 44px;
   height: 44px;
-  font-size: 34px;
-  color: white;
-  background: transparent;
   border: 0;
+  background: transparent;
+  color: white;
+  font-size: 34px;
   cursor: pointer;
 }
 
-/* Op kleinere schermen komen kaarten en details onder elkaar. */
-@media (max-width: 900px) {
+@media (max-width: 980px) {
+  .project-overview,
   .project-cards,
-  .project-details {
+  .project-details,
+  .custom-project-card,
+  .smyle-gallery {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 768px) {
-  .work-container {
-    padding: 25px;
-    gap: 20px;
+  .smyle-gallery img:first-child {
+    grid-row: auto;
+    height: auto;
+  }
+
+  .project-card-content {
+    min-height: auto;
   }
 }

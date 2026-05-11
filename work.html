@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projecten van Imanredjo Nequille: Air Gesture Wall Switch met ESP32 en SMYLe community project.">
   <title>Projecten | Imanredjo Nequille</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/work.css">
@@ -11,31 +12,56 @@
 
 <body>
 
-  <!-- nav Buttons top page -->
-  <nav class="main-nav" aria-label="Hoofdnavigatie">
-    <a href="index.html">Home</a>
-    <a href="blog.html">Blog</a>
-    <a href="work.html" class="active">Projecten</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+  <header class="site-header">
+    <a class="site-brand" href="index.html">Imanredjo Nequille</a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Menu openen">
+    <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="main-nav" aria-label="Hoofdnavigatie">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="work.html" class="active">Projecten</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Dark mode aanzetten" aria-pressed="false">Dark mode</button>
+  </header>
 
-  <main class="work-wrapper">
-
-    <!-- Dit is het grote blok met alle projectinformatie. -->
-    <section class="work-container">
-
-      <p class="eyebrow">Project case study</p>
-      <h2>Slimme lichtschakelaar met ESP32</h2>
-
+  <main class="page-shell work-wrapper">
+    <section class="page-hero work-hero">
+      <p class="eyebrow">Portfolio work</p>
+      <h1>Projecten</h1>
       <p>
-        In teamverband ontwikkelde ik een slimme lichtschakelaar die met handgebaren werkt via sensoren en een ESP32.
-        Dit project laat zien hoe ik hardware en software combineer om een praktische oplossing te bouwen.
+        Een selectie van projecten waarin ik techniek, samenwerking en maatschappelijke betrokkenheid laat zien.
       </p>
+    </section>
 
-      <!-- ESP32 Project -->
+    <section class="project-overview" aria-label="Projectoverzicht">
+      <a href="#air-gesture" class="overview-card">
+        <span>Case 01</span>
+        <strong>Air Gesture Wall Switch</strong>
+        <small>ESP32, sensoren en prototype testing</small>
+      </a>
+
+      <a href="#smyle-project" class="overview-card">
+        <span>Case 02</span>
+        <strong>Bomen planten met SMYLe</strong>
+        <small>Duurzaamheid, vrijwilligerswerk en teamwork</small>
+      </a>
+    </section>
+
+    <section class="work-container" id="air-gesture">
+      <div class="project-section-title">
+        <p class="eyebrow">Uitgelicht project</p>
+        <h2>Air Gesture Wall Switch</h2>
+        <p>Een technisch groepsproject waarin we een slimme lichtschakelaar bouwden die reageert op handgebaren.</p>
+      </div>
+
       <div class="project-cards">
         <article class="project-card">
-          <img src="img/All/Project1.jpg.jpeg" alt="Slimme lichtschakelaar project met ESP32 - prototype foto 1">
+          <img src="img/All/Project1.jpg.jpeg" alt="Slimme lichtschakelaar project met ESP32 - prototype foto 1" loading="lazy">
           <div class="project-card-content">
             <h3>Prototype</h3>
             <p>We bouwden een eerste werkende opstelling met sensoren, bekabeling en ESP32-aansturing.</p>
@@ -48,7 +74,7 @@
         </article>
 
         <article class="project-card">
-          <img src="img/All/Project2.jpg.jpeg" alt="Slimme lichtschakelaar project met ESP32 - testopstelling foto 2">
+          <img src="img/All/Project2.jpg.jpeg" alt="Slimme lichtschakelaar project met ESP32 - testopstelling foto 2" loading="lazy">
           <div class="project-card-content">
             <h3>Testen</h3>
             <p>Door te testen zagen we hoe afstand, timing en sensorwaarden invloed hadden op het schakelen.</p>
@@ -60,7 +86,7 @@
         </article>
 
         <article class="project-card">
-          <img src="img/All/Project3.jpg.jpeg" alt="Slimme lichtschakelaar project met ESP32 - eindresultaat foto 3">
+          <img src="img/All/Project3.jpg.jpeg" alt="Slimme lichtschakelaar project met ESP32 - eindresultaat foto 3" loading="lazy">
           <div class="project-card-content">
             <h3>Resultaat</h3>
             <p>Het eindresultaat reageert op handgebaren en toont hoe techniek dagelijkse handelingen slimmer kan maken.</p>
@@ -72,7 +98,6 @@
         </article>
       </div>
 
-      <!-- ESP32 details -->
       <section class="project-details" aria-label="Projectdetails">
         <div>
           <h3>Probleem</h3>
@@ -94,22 +119,85 @@
           <p>Ik leerde beter logisch denken, testen met echte hardware en samenwerken aan een technische oplossing.</p>
         </div>
       </section>
-
     </section>
 
+    <section class="future-projects" id="smyle-project" aria-label="SMYLe project">
+      <div class="section-heading">
+        <p class="eyebrow">Meer werk</p>
+        <h2>Bomen planten met SMYLe Suriname Muslim Youth League</h2>
+        <p>Een duurzaamheidsproject waarbij jongeren samenwerkten aan een groenere omgeving in Suriname.</p>
+      </div>
+
+      <article class="custom-project-card">
+        <div class="custom-project-copy">
+          <span class="project-status">Community project</span>
+          <h3>Bomen planten met SMYLe</h3>
+          <p>
+            In samenwerking met SMYLe Suriname Muslim Youth League heb ik deelgenomen aan een
+            duurzaamheidsproject waarbij we bomen hebben geplant in Suriname. Dit initiatief was gericht op
+            het beschermen van het milieu en het vergroten van bewustwording onder jongeren over het belang
+            van natuurbehoud.
+          </p>
+          <div class="skill-list compact">
+            <span class="skill-badge">Duurzaamheid</span>
+            <span class="skill-badge">Vrijwilligerswerk</span>
+            <span class="skill-badge">Teamwork</span>
+          </div>
+        </div>
+
+        <div class="custom-project-meta">
+          <div>
+            <strong>Doel</strong>
+            <span>Bijdragen aan een groenere omgeving en jongeren bewust maken van natuurbehoud.</span>
+          </div>
+          <div>
+            <strong>Mijn rol</strong>
+            <span>Bomen planten, samenwerken met vrijwilligers en de activiteit ondersteunen.</span>
+          </div>
+          <div>
+            <strong>Resultaat</strong>
+            <span>Bomen geplant, positieve impact op de gemeenschap en meer bewustzijn over duurzaamheid.</span>
+          </div>
+        </div>
+      </article>
+
+      <div class="smyle-gallery" aria-label="Foto's van het SMYLe bomen planten project">
+        <img src="img/All/SMYLe_project1.jpg" alt="SMYLe bomen planten project foto 1" loading="lazy">
+        <img src="img/All/SMYLe_project 2.jpg" alt="SMYLe bomen planten project foto 2" loading="lazy">
+        <img src="img/All/SMYLe_project3.jpg" alt="SMYLe bomen planten project foto 3" loading="lazy">
+      </div>
+
+      <section class="project-details smyle-details" aria-label="SMYLe projectdetails">
+        <div>
+          <h3>Doel</h3>
+          <p>Bijdragen aan een groenere omgeving in Suriname en jongeren betrekken bij maatschappelijke projecten.</p>
+        </div>
+
+        <div>
+          <h3>Mijn rol</h3>
+          <p>Ik nam actief deel aan het planten van bomen en werkte samen met andere vrijwilligers.</p>
+        </div>
+
+        <div>
+          <h3>Resultaat</h3>
+          <p>Er zijn bomen succesvol geplant en de samenwerking tussen jongeren werd versterkt.</p>
+        </div>
+
+        <div>
+          <h3>Wat ik leerde</h3>
+          <p>Ik leerde hoe teamwork, verantwoordelijkheid en kleine acties samen grote impact kunnen hebben.</p>
+        </div>
+      </section>
+    </section>
   </main>
 
-  <!-- Zoomin fotos -->
   <div id="lightbox" class="lightbox" aria-hidden="true">
     <button id="closeBtn" type="button" aria-label="Sluit afbeelding">&times;</button>
     <img id="lightbox-img" alt="Vergrote projectafbeelding">
   </div>
 
-  <!-- Footer bottom page -->
   <footer class="footer">
     <div class="footer-content">
-      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; All Rights Reserved</p>
-
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
@@ -118,16 +206,18 @@
       </div>
 
       <div class="footer-socials">
-        <a href="https://github.com/niquille5" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:niquille5@gmail.com">Email</a>
-        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://wa.me/5978734186" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/logo.png/github.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/logo.png/linkedin.png" alt=""></a>
+        <a href="mailto:niquille5@gmail.com" aria-label="Email"><img src="img/logo.png/gmail.png" alt=""></a>
+        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/logo.png/instagram.png" alt=""></a>
+        <a href="https://wa.me/5978734186" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/logo.png/whatsapp.png" alt=""></a>
       </div>
+
+      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; All Rights Reserved</p>
     </div>
   </footer>
 
-  <!-- Link JS. -->
+  <script src="js/site.js"></script>
   <script src="js/work.js"></script>
 
 </body>

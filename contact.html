@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Neem contact op met Imanredjo Nequille voor samenwerking, stagekansen of portfoliofeedback.">
   <title>Contact | Imanredjo Nequille</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/contact.css">
@@ -11,87 +12,117 @@
 
 <body>
 
-  <!-- nav Buttons top page -->
-  <nav class="main-nav" aria-label="Hoofdnavigatie">
-    <a href="index.html">Home</a>
-    <a href="blog.html">Blog</a>
-    <a href="work.html">Projecten</a>
-    <a href="contact.html" class="active">Contact</a>
-  </nav>
+  <header class="site-header">
+    <a class="site-brand" href="index.html">Imanredjo Nequille</a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Menu openen">
+    <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="main-nav" aria-label="Hoofdnavigatie">
+      <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
+      <a href="work.html">Projecten</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Dark mode aanzetten" aria-pressed="false">Dark mode</button>
+  </header>
 
-  <main class="contact-page">
-    <!-- Contactinformatie -->
-    <section class="contact-container">
-
+  <main class="page-shell">
+    <section class="page-hero">
       <p class="eyebrow">Contact</p>
-      <h2>Laten we praten</h2>
-      <p>Stuur een bericht of bereik mij via mijn profielen.</p>
-
-      <div class="socials">
-        <a class="social-link" href="https://github.com/niquille5" target="_blank" rel="noopener">
-          <img src="img/logo.png/github.png" alt="GitHub logo">
-          <span>GitHub</span>
-        </a>
-
-        <a class="social-link" href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener">
-          <img src="img/logo.png/linkedin.png" alt="LinkedIn logo">
-          <span>LinkedIn</span>
-        </a>
-
-        <a class="social-link" href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener">
-          <img src="img/logo.png/instagram.png" alt="Instagram logo">
-          <span>@nicck_k_k</span>
-        </a>
-
-        <a class="social-link" href="https://wa.me/5978734186" target="_blank" rel="noopener">
-          <img src="img/logo.png/whatsapp.png" alt="WhatsApp logo">
-          <span>+597 8734186</span>
-        </a>
-
-        <a class="social-link" href="mailto:niquille5@gmail.com">
-          <img src="img/logo.png/gmail.png" alt="Email logo">
-          <span>niquille5@gmail.com</span>
-        </a>
-      </div>
-
-      <a class="btn download-link" href="cv/CV_Imanredjo_Nequille_Professioneel.docx" download>Download CV</a>
+      <h1>Laten we praten</h1>
+      <p>Heb je een vraag, opdracht of idee? Stuur mij gerust een bericht. Ik reageer zo snel mogelijk.</p>
     </section>
 
-    <!-- contactformulier -->
-    <section class="contact-container">
-      <p class="eyebrow">Bericht</p>
-      <h2>Contactformulier</h2>
+    <div class="contact-page">
+      <section class="contact-container contact-intro">
+        <p class="eyebrow">Direct bereikbaar</p>
+        <h2>Connect met mij</h2>
+        <p>Gebruik de snelste route die bij jou past. Voor serieuze vragen is mail of LinkedIn meestal het handigst.</p>
 
-      <form
-        class="contact-form"
-        id="contactForm"
-        data-email="niquille5@gmail.com"
-        data-emailjs-public-key="iXdiBXTpEx3Oxk92t"
-        data-emailjs-service-id="service_2kf1x1c"
-        data-emailjs-template-id="template_0nfphg6"
-      >
-        <input type="hidden" name="time" id="messageTime">
+        <div class="contact-methods">
+          <a class="contact-method" href="mailto:niquille5@gmail.com">
+            <img src="img/logo.png/gmail.png" alt="">
+            <span>
+              <strong>Email</strong>
+              <small>niquille5@gmail.com</small>
+            </span>
+          </a>
 
-        <label for="name">Naam</label>
-        <input type="text" id="name" name="name" placeholder="Jouw naam" required>
+          <a class="contact-method" href="https://wa.me/5978734186" target="_blank" rel="noopener">
+            <img src="img/logo.png/whatsapp.png" alt="">
+            <span>
+              <strong>WhatsApp</strong>
+              <small>Snelle reactie</small>
+            </span>
+          </a>
+        </div>
 
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" placeholder="jouw@email.com" required>
+        <div class="socials" aria-label="Sociale profielen">
+          <a class="social-link" href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub">
+            <img src="img/logo.png/github.png" alt="GitHub logo">
+          </a>
 
-        <label for="message">Bericht</label>
-        <textarea id="message" name="message" rows="5" placeholder="Schrijf je bericht..." required></textarea>
+          <a class="social-link" href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <img src="img/logo.png/linkedin.png" alt="LinkedIn logo">
+          </a>
 
-        <button type="submit">Verstuur bericht</button>
-        <p class="form-status" id="formStatus" aria-live="polite"></p>
-      </form>
-    </section>
+          <a class="social-link" href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram">
+            <img src="img/logo.png/instagram.png" alt="Instagram logo">
+          </a>
+        </div>
+
+        <div class="availability">
+          <span></span>
+          <p>Beschikbaar voor samenwerking, stagekansen en portfoliofeedback.</p>
+        </div>
+
+        <a class="btn download-link" href="cv/CV_Imanredjo_Nequille_Professioneel.pdf" download>Download CV</a>
+      </section>
+
+      <section class="contact-container contact-form-card">
+        <p class="eyebrow">Bericht</p>
+        <h2>Stuur een bericht</h2>
+        <p>Vertel kort wie je bent en waarmee ik kan helpen.</p>
+
+        <form
+          class="contact-form"
+          id="contactForm"
+          data-email="niquille5@gmail.com"
+          data-emailjs-public-key="iXdiBXTpEx3Oxk92t"
+          data-emailjs-service-id="service_2kf1x1c"
+          data-emailjs-template-id="template_0nfphg6"
+        >
+          <input type="hidden" name="time" id="messageTime">
+
+          <div class="form-grid">
+            <div class="field-group">
+              <label for="name">Naam</label>
+              <input type="text" id="name" name="name" placeholder="Jouw naam" required>
+            </div>
+
+            <div class="field-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" placeholder="jouw@email.com" required>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="message">Bericht</label>
+            <textarea id="message" name="message" rows="5" placeholder="Schrijf je bericht..." required></textarea>
+          </div>
+
+          <button type="submit">Verstuur bericht</button>
+          <p class="form-status" id="formStatus" aria-live="polite"></p>
+        </form>
+      </section>
+    </div>
   </main>
 
-  <!-- Footer bottom page -->
   <footer class="footer">
     <div class="footer-content">
-      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; All Rights Reserved</p>
-
       <div class="footer-links">
         <a href="index.html">Home</a>
         <a href="blog.html">Blog</a>
@@ -100,17 +131,19 @@
       </div>
 
       <div class="footer-socials">
-        <a href="https://github.com/niquille5" target="_blank" rel="noopener">GitHub</a>
-        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="mailto:niquille5@gmail.com">Email</a>
-        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://wa.me/5978734186" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/logo.png/github.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/logo.png/linkedin.png" alt=""></a>
+        <a href="mailto:niquille5@gmail.com" aria-label="Email"><img src="img/logo.png/gmail.png" alt=""></a>
+        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/logo.png/instagram.png" alt=""></a>
+        <a href="https://wa.me/5978734186" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/logo.png/whatsapp.png" alt=""></a>
       </div>
+
+      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; All Rights Reserved</p>
     </div>
   </footer>
 
-  <!-- Link JS. -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/site.js"></script>
   <script src="js/contact.js"></script>
 </body>
 

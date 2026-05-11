@@ -1,126 +1,294 @@
-/* Zet de contactblokken naast elkaar. */
 .contact-page {
   display: grid;
-  grid-template-columns: minmax(280px, 0.85fr) minmax(320px, 1.15fr);
-  gap: 24px;
-  max-width: 1120px;
-  margin: 40px auto;
-  padding: 0 20px;
+  grid-template-columns: minmax(300px, 0.9fr) minmax(360px, 1.1fr);
+  gap: 30px;
+  align-items: start;
 }
 
-/* Wit blok voor contactinfo of formulier. */
 .contact-container {
-  padding: 40px;
-  background: white;
+  padding: clamp(28px, 4vw, 44px);
+  border: 1px solid var(--line);
   border-radius: 8px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.contact-intro {
+  position: sticky;
+  top: 96px;
+  background:
+    linear-gradient(135deg, rgba(29, 78, 216, 0.08), transparent 46%),
+    linear-gradient(180deg, #ffffff, #f7faff);
+}
+
+body.dark-mode .contact-intro {
+  background:
+    linear-gradient(135deg, rgba(96, 165, 250, 0.14), transparent 46%),
+    linear-gradient(180deg, #111827, #132033);
+}
+
+.contact-container h2 {
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: clamp(28px, 4vw, 38px);
+  line-height: 1.08;
+  text-wrap: balance;
 }
 
 .contact-container p {
-  margin-bottom: 22px;
-  color: #334155;
+  margin-top: 12px;
+  color: var(--muted);
+  text-wrap: pretty;
 }
 
-/* Lijst met social/contact links. */
-.socials {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* Een losse contactlink met icoon. */
-.social-link {
-  display: flex;
-  align-items: center;
+.contact-methods {
+  display: grid;
   gap: 12px;
-  padding: 12px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: 8px;
-  text-decoration: none;
-  color: #0f172a;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin-top: 28px;
 }
 
-/* Zorgt dat de iconen even groot blijven. */
-.social-link img {
-  width: 28px;
-  height: 28px;
+.contact-method {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  transition: transform 0.22s ease, border-color 0.22s ease, background-color 0.22s ease;
+}
+
+body.dark-mode .contact-method {
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.contact-method:hover {
+  border-color: #b9c8d9;
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+body.dark-mode .contact-method:hover {
+  background: #172033;
+}
+
+.contact-method img {
+  width: 34px;
+  height: 34px;
   object-fit: contain;
 }
 
-/* Contactlink beweegt iets omhoog als je erover gaat. */
-.social-link:hover {
-  background: #e2e8f0;
-  transform: translateY(-3px);
+.contact-method strong,
+.contact-method small {
+  display: block;
 }
 
-/* De CV-knop is net zo breed als het blok. */
+.contact-method strong {
+  color: var(--ink);
+  font-size: 15px;
+}
+
+.contact-method small {
+  overflow: hidden;
+  color: var(--muted);
+  font-size: 13px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.social-link {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #dbe3ec;
+  border-radius: 8px;
+  background: #ffffff;
+  text-decoration: none;
+  transition: transform 0.22s ease, background-color 0.22s ease, border-color 0.22s ease;
+}
+
+.social-link:hover {
+  background: #eaf1fb;
+  border-color: #b9c8d9;
+  transform: translateY(-2px);
+}
+
+.social-link img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.availability {
+  display: grid;
+  grid-template-columns: 12px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  margin-top: 28px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.64);
+}
+
+body.dark-mode .availability {
+  background: rgba(15, 23, 42, 0.62);
+}
+
+.availability span {
+  width: 10px;
+  height: 10px;
+  margin-top: 8px;
+  border-radius: 999px;
+  background: #22c55e;
+  box-shadow: 0 0 0 6px rgba(34, 197, 94, 0.12);
+}
+
+.availability p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .download-link {
   width: 100%;
   margin-top: 22px;
 }
 
-/* Formulier staat netjes onder elkaar. */
+.contact-form-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-form-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto;
+  height: 5px;
+  background: linear-gradient(90deg, var(--accent), #93c5fd);
+}
+
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 
 .contact-form label {
-  color: #0f172a;
-  font-weight: 800;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
 }
 
-/* Velden waar je tekst invult. */
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 12px 14px;
-  border: 1px solid #cbd5e1;
+  padding: 14px;
+  border: 1px solid var(--line);
   border-radius: 8px;
+  background: #fbfdff;
+  color: var(--ink);
   font: inherit;
-  color: #0f172a;
-  background: #f8fafc;
+  font-size: 15px;
+  transition: border-color 0.22s ease, background-color 0.22s ease, box-shadow 0.22s ease;
 }
 
-/* Blauwe rand als je in een veld klikt. */
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background: #0f172a;
+}
+
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: 3px solid rgba(59, 130, 246, 0.22);
-  border-color: #3b82f6;
+  outline: 0;
+  border-color: var(--accent);
   background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(29, 78, 216, 0.14);
+}
+
+body.dark-mode .contact-form input:focus,
+body.dark-mode .contact-form textarea:focus {
+  background: #111827;
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.16);
 }
 
 .contact-form textarea {
+  min-height: 170px;
   resize: vertical;
-  min-height: 140px;
 }
 
-/* Statusbericht onder de verzendknop. */
+.contact-form button {
+  width: 100%;
+  margin-top: 2px;
+}
+
 .form-status {
   min-height: 24px;
-  margin: 4px 0 0;
-  font-weight: 700;
+  margin: 0;
+  font-weight: 800;
 }
 
 .form-status.success {
   color: #166534;
 }
 
+body.dark-mode .form-status.success {
+  color: #86efac;
+}
+
 .form-status.error {
   color: #b91c1c;
 }
 
-/* Op kleine schermen komen de twee contactblokken onder elkaar. */
-@media (max-width: 850px) {
+body.dark-mode .form-status.error {
+  color: #fca5a5;
+}
+
+@media (max-width: 900px) {
   .contact-page {
     grid-template-columns: 1fr;
-    margin: 30px auto;
   }
 
-  .contact-container {
-    padding: 28px 22px;
+  .contact-intro {
+    position: static;
+  }
+}
+
+@media (max-width: 620px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-method {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+
+  .socials {
+    justify-content: center;
   }
 }
