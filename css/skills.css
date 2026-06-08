@@ -12,14 +12,6 @@
   color: var(--muted);
 }
 
-.skill-command-center {
-  display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(280px, 1fr);
-  gap: 18px;
-  align-items: stretch;
-}
-
-.skill-filters,
 .skill-detail-panel {
   border: 1px solid color-mix(in srgb, var(--line) 84%, transparent);
   border-radius: var(--radius-lg, 16px);
@@ -27,41 +19,6 @@
     linear-gradient(135deg, color-mix(in srgb, var(--surface) 90%, transparent), color-mix(in srgb, var(--surface-soft) 64%, transparent));
   box-shadow: var(--card-shadow, 0 18px 48px rgba(17, 24, 39, 0.08));
   backdrop-filter: blur(18px);
-}
-
-.skill-filters {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 12px;
-}
-
-.skill-filter {
-  min-height: 38px;
-  padding: 9px 14px;
-  border: 1px solid color-mix(in srgb, var(--line) 80%, transparent);
-  border-radius: 999px;
-  background: color-mix(in srgb, var(--surface) 82%, transparent);
-  color: var(--muted);
-  box-shadow: none;
-  font-size: 13px;
-  font-weight: 900;
-  transition:
-    transform 0.24s cubic-bezier(0.2, 0.8, 0.2, 1),
-    border-color 0.24s ease,
-    background-color 0.24s ease,
-    color 0.24s ease,
-    box-shadow 0.24s ease;
-}
-
-.skill-filter:hover,
-.skill-filter.active {
-  border-color: color-mix(in srgb, var(--accent) 42%, var(--line));
-  background: color-mix(in srgb, var(--accent) 12%, var(--surface));
-  color: var(--ink);
-  box-shadow: 0 12px 28px color-mix(in srgb, var(--accent) 13%, transparent);
-  transform: translateY(-2px);
 }
 
 .skill-game-layout {
@@ -359,7 +316,6 @@
   font-weight: 900;
 }
 
-html[data-theme="dark"] .skill-filters,
 html[data-theme="dark"] .skill-detail-panel,
 html[data-theme="dark"] .skill-tree-stage {
   background:
@@ -420,7 +376,6 @@ html[data-theme="dark"] .node-icon {
 }
 
 @media (max-width: 1100px) {
-  .skill-command-center,
   .skill-game-layout {
     grid-template-columns: 1fr;
   }
@@ -494,14 +449,6 @@ html[data-theme="dark"] .node-icon {
   .skill-tree-stage {
     padding: 18px;
     border-radius: 18px;
-  }
-
-  .skill-filters {
-    align-items: stretch;
-  }
-
-  .skill-filter {
-    flex: 1 1 140px;
   }
 
   .skill-node {
@@ -893,21 +840,6 @@ html[data-theme="dark"] .skill-tree-stage {
   }
 }
 
-/* Final skill tree correction */
-.skill-command-center {
-  display: block;
-}
-
-.skill-filters {
-  width: 100%;
-  justify-content: center;
-  border-color: color-mix(in srgb, var(--accent) 20%, var(--line));
-}
-
-.skill-filter {
-  color: var(--ink);
-}
-
 .skill-game-layout {
   grid-template-columns: minmax(0, 1fr) minmax(290px, 340px);
 }
@@ -1081,20 +1013,10 @@ html[data-theme="dark"] .skill-tree-stage {
   color: var(--muted);
 }
 
-html[data-theme="dark"] .skill-filters,
 html[data-theme="dark"] .skill-detail-panel {
   background:
     radial-gradient(circle at 18% 18%, rgba(96, 165, 250, 0.16), transparent 34%),
     linear-gradient(145deg, rgba(15, 23, 42, 0.92), rgba(8, 20, 42, 0.84));
-}
-
-html[data-theme="dark"] .skill-filter {
-  color: #eaf2ff;
-}
-
-html[data-theme="dark"] .skill-filter.active,
-html[data-theme="dark"] .skill-filter:hover {
-  color: #ffffff;
 }
 
 html[data-theme="dark"] .skill-detail-panel h2,
@@ -1157,10 +1079,6 @@ html[data-theme="dark"] .skill-detail-panel p:not(.eyebrow) {
   .skill-tree-stage {
     max-height: none;
     min-height: 0;
-  }
-
-  .skill-filters {
-    justify-content: stretch;
   }
 
 }
