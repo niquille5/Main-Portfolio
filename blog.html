@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Blog van Imanredjo Nequille over ICT, leren, groei en Nieuw-Amsterdam als thuisbasis.">
-    <title>Blog | Imanredjo Nequille</title>
+    <meta name="description" content="Over Imanredjo Nequille: ICT, leren, groei en Nieuw-Amsterdam als thuisbasis.">
+    <title>Over mij | Imanredjo Nequille</title>
+    <script src="js/theme-init.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/blog.css">
 </head>
@@ -15,29 +16,98 @@
   <header class="site-header">
     <a class="site-brand" href="index.html">Imanredjo Nequille</a>
     <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Menu openen">
-    <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true">
+    <label class="nav-toggle-label" for="nav-toggle" role="button" tabindex="0" aria-label="Menu openen" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
     </label>
     <nav class="main-nav" aria-label="Hoofdnavigatie">
       <a href="index.html">Home</a>
-      <a href="blog.html" class="active">Blog</a>
       <a href="work.html">Projecten</a>
+      <a href="blog.html" class="active">Over mij</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <button class="theme-toggle" type="button" aria-label="Dark mode aanzetten" aria-pressed="false">Dark mode</button>
+    <button class="theme-toggle" type="button" aria-label="Dark mode aanzetten" aria-pressed="false">
+      <span class="theme-toggle-track" aria-hidden="true">
+        <span class="theme-toggle-thumb">
+          <span class="theme-icon theme-icon-sun">☀</span>
+          <span class="theme-icon theme-icon-moon">☾</span>
+        </span>
+      </span>
+      <span class="theme-toggle-text">Dark mode</span>
+    </button>
   </header>
 
   <main class="page-shell">
-    <section class="page-hero">
+    <section class="photo-wheel-section reveal-item" aria-labelledby="photo-wheel-title">
+      <div class="photo-wheel-header">
+        <p class="eyebrow">Fotografie</p>
+        <h2 id="photo-wheel-title">Mijn fotografie</h2>
+        <p>Een kleine selectie van beelden die mijn creatieve kant laten zien.</p>
+      </div>
+
+      <div class="photo-wheel" data-photo-wheel>
+        <div class="photo-wheel-stage" tabindex="0" aria-roledescription="carousel" aria-label="Fotografie showcase">
+          <figure class="photo-wheel-slide is-active">
+            <img src="img/photography/nieuw-amsterdam-1.jpeg" alt="Nieuw-Amsterdam fotografie beeld 1" loading="lazy">
+            <figcaption>Nieuw-Amsterdam aan de rivier</figcaption>
+          </figure>
+
+          <figure class="photo-wheel-slide">
+            <img src="img/photography/nieuw-amsterdam-2.jpeg" alt="Nieuw-Amsterdam fotografie beeld 2" loading="lazy">
+            <figcaption>Rustige plekken in Commewijne</figcaption>
+          </figure>
+
+          <figure class="photo-wheel-slide">
+            <img src="img/photography/nieuw-amsterdam-3.jpeg" alt="Nieuw-Amsterdam fotografie beeld 3" loading="lazy">
+            <figcaption>Mijn thuisbasis in beeld</figcaption>
+          </figure>
+
+          <figure class="photo-wheel-slide">
+            <img src="img/photography/nieuw-amsterdam-4.jpeg" alt="Nieuw-Amsterdam fotografie beeld 4" loading="lazy">
+            <figcaption>Natuur en omgeving</figcaption>
+          </figure>
+
+          <figure class="photo-wheel-slide">
+            <img src="img/photography/nieuw-amsterdam-5.jpeg" alt="Nieuw-Amsterdam fotografie beeld 5" loading="lazy">
+            <figcaption>Verhalen uit Nieuw-Amsterdam</figcaption>
+          </figure>
+
+          <figure class="photo-wheel-slide">
+            <img src="img/photography/nieuw-amsterdam-6.jpeg" alt="Nieuw-Amsterdam fotografie beeld 6" loading="lazy">
+            <figcaption>Hengelen langs de rivier</figcaption>
+          </figure>
+
+          <figure class="photo-wheel-slide">
+            <img src="img/photography/nieuw-amsterdam-7.jpeg" alt="Nieuw-Amsterdam fotografie beeld 7" loading="lazy">
+            <figcaption>Thuis in Commewijne</figcaption>
+          </figure>
+        </div>
+
+        <div class="photo-wheel-controls" aria-label="Fotografie slider bediening">
+          <button class="photo-wheel-btn" type="button" data-photo-prev aria-label="Vorige foto">
+            <span aria-hidden="true">‹</span>
+          </button>
+
+          <p class="photo-wheel-caption" data-photo-caption aria-live="polite">Portret en compositie</p>
+
+          <button class="photo-wheel-btn" type="button" data-photo-next aria-label="Volgende foto">
+            <span aria-hidden="true">›</span>
+          </button>
+        </div>
+
+        <div class="photo-wheel-dots" data-photo-dots aria-label="Fotografie slider paginatie"></div>
+      </div>
+    </section>
+
+    <section class="page-hero reveal-item">
       <p class="eyebrow">Mijn verhaal</p>
-      <h1>Blog</h1>
+      <h1>Over mij</h1>
       <p>Over mijn leerproces, mijn groei in ICT en de plek waar ik vandaan kom.</p>
     </section>
 
     <div class="blog-wrapper">
-      <article class="blog-container">
+      <article class="blog-container reveal-item">
         <h2>Mijn leerproces en mijn thuisbasis</h2>
 
         <p>
@@ -45,6 +115,12 @@
           UNASAT, terwijl ik overdag werk en mezelf verder ontwikkel. Dat vraagt planning, discipline en
           doorzettingsvermogen, vooral op drukke dagen.
         </p>
+
+        <div class="about-photo-grid" aria-label="Beelden bij mijn verhaal">
+          <img src="img/photography/nieuw-amsterdam-1.jpeg" alt="Nieuw-Amsterdam bij mijn verhaal" loading="lazy">
+          <img src="img/photography/nieuw-amsterdam-4.jpeg" alt="Rustige omgeving in Nieuw-Amsterdam" loading="lazy">
+          <img src="img/photography/nieuw-amsterdam-7.jpeg" alt="Thuisbasis in Commewijne" loading="lazy">
+        </div>
 
         <p>
           Wat mij aantrekt in ICT is het oplossen van problemen. Ik denk graag logisch en stap voor stap naar
@@ -127,26 +203,27 @@
         </div>
       </aside>
     </div>
+
   </main>
 
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-links">
         <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html">Over mij</a>
         <a href="work.html">Projecten</a>
         <a href="contact.html">Contact</a>
       </div>
 
       <div class="footer-socials">
-        <a href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/logo.png/github.png" alt=""></a>
-        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/logo.png/linkedin.png" alt=""></a>
-        <a href="mailto:niquille5@gmail.com" aria-label="Email"><img src="img/logo.png/gmail.png" alt=""></a>
-        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/logo.png/instagram.png" alt=""></a>
-        <a href="https://wa.me/5978734186" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/logo.png/whatsapp.png" alt=""></a>
+        <a href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/social-icons/github.svg" alt=""></a>
+        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/social-icons/linkedin.svg" alt=""></a>
+        <a href="mailto:niquille5@gmail.com" aria-label="Email"><img src="img/social-icons/email.svg" alt=""></a>
+        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/social-icons/instagram.svg" alt=""></a>
+        <a href="https://wa.me/5978734186" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/social-icons/whatsapp.svg" alt=""></a>
       </div>
 
-      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; All Rights Reserved</p>
+      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; Alle rechten voorbehouden</p>
     </div>
   </footer>
   <script src="js/site.js"></script>

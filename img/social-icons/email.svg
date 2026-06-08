@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="E-mail">
+  <rect width="48" height="48" rx="10" fill="#EA4335"/>
+  <path fill="#fff" d="M12 16.5A2.5 2.5 0 0 1 14.5 14h19A2.5 2.5 0 0 1 36 16.5v15a2.5 2.5 0 0 1-2.5 2.5h-19A2.5 2.5 0 0 1 12 31.5v-15zm3.2.5 8.8 6.5 8.8-6.5H15.2zm17.8 14V20.3l-8.1 6a1.5 1.5 0 0 1-1.8 0l-8.1-6V31h18z"/>
+</svg>

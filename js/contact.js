@@ -34,6 +34,19 @@ document.addEventListener("DOMContentLoaded", () => {
     formStatus.classList.add(type);
   };
 
+  const setSubmitLoading = (button, isLoading) => {
+    if (!button) return;
+
+    if (!button.dataset.defaultText) {
+      button.dataset.defaultText = button.textContent;
+    }
+
+    button.disabled = isLoading;
+    button.classList.toggle("is-loading", isLoading);
+    button.setAttribute("aria-busy", String(isLoading));
+    button.textContent = isLoading ? "Verzenden..." : button.dataset.defaultText;
+  };
+
   const hasEmailJsConfig = () => {
     const publicKey = form?.dataset.emailjsPublicKey;
     const serviceId = form?.dataset.emailjsServiceId;
@@ -72,19 +85,22 @@ document.addEventListener("DOMContentLoaded", () => {
       messageTime.value = new Date().toLocaleString("nl-NL");
     }
 
+    const submitButton = form.querySelector('button[type="submit"]');
+
     if (!hasEmailJsConfig()) {
+      setSubmitLoading(submitButton, true);
       openMailApp();
       form.reset();
+      setSubmitLoading(submitButton, false);
       return;
     }
 
-    const submitButton = form.querySelector('button[type="submit"]');
     const publicKey = form.dataset.emailjsPublicKey;
     const serviceId = form.dataset.emailjsServiceId;
     const templateId = form.dataset.emailjsTemplateId;
 
     try {
-      if (submitButton) submitButton.disabled = true;
+      setSubmitLoading(submitButton, true);
       setStatus("Bericht wordt verzonden...", "success");
 
       await emailjs.sendForm(serviceId, templateId, form, { publicKey });
@@ -95,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("EmailJS error:", error);
       setStatus("Verzenden lukt niet. Probeer het later opnieuw.", "error");
     } finally {
-      if (submitButton) submitButton.disabled = false;
+      setSubmitLoading(submitButton, false);
     }
   });
 });

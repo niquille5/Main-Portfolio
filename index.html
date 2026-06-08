@@ -6,34 +6,63 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portfolio van Imanredjo Nequille, ICT-student met focus op webontwikkeling en praktische digitale projecten.">
   <title>Imanredjo Nequille | Portfolio</title>
+  <script src="js/theme-init.js"></script>
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
+  <div class="welcome-overlay" id="welcomeOverlay" role="dialog" aria-modal="true" aria-labelledby="welcomeTitle" aria-describedby="welcomeIntro">
+    <div class="welcome-shapes" aria-hidden="true">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="welcome-transition-block" aria-hidden="true"></div>
+
+    <section class="welcome-card">
+      <p class="welcome-kicker">Portfolio</p>
+      <h1 id="welcomeTitle">Imanredjo Nequille</h1>
+      <p class="welcome-role">ICT Student &amp; Web Developer</p>
+      <p class="welcome-copy" id="welcomeIntro">Welkom op mijn portfolio</p>
+      <button class="welcome-enter" id="welcomeEnter" type="button" aria-label="Enter Portfolio">
+        <span class="welcome-enter-text">Enter Portfolio</span>
+        <span class="welcome-enter-arrow" aria-hidden="true">→</span>
+      </button>
+    </section>
+  </div>
+
   <header class="site-header">
     <a class="site-brand" href="index.html">Imanredjo Nequille</a>
     <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Menu openen">
-    <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true">
+    <label class="nav-toggle-label" for="nav-toggle" role="button" tabindex="0" aria-label="Menu openen" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
     </label>
     <nav class="main-nav" aria-label="Hoofdnavigatie">
       <a href="index.html" class="active">Home</a>
-      <a href="blog.html">Blog</a>
       <a href="work.html">Projecten</a>
+      <a href="blog.html">Over mij</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <button class="theme-toggle" type="button" aria-label="Dark mode aanzetten" aria-pressed="false">Dark mode</button>
+    <button class="theme-toggle" type="button" aria-label="Dark mode aanzetten" aria-pressed="false">
+      <span class="theme-toggle-track" aria-hidden="true">
+        <span class="theme-toggle-thumb">
+          <span class="theme-icon theme-icon-sun">☀</span>
+          <span class="theme-icon theme-icon-moon">☾</span>
+        </span>
+      </span>
+      <span class="theme-toggle-text">Dark mode</span>
+    </button>
   </header>
 
   <main class="homepage">
     <section class="hero-panel">
       <div class="hero-copy">
-        <p class="eyebrow">Portfolio</p>
         <h1>Imanredjo Nequille</h1>
-        <h2>ICT-student die webontwikkeling, logisch denken en praktische oplossingen combineert.</h2>
+        <h2>Ik ben een ICT-student die webontwikkeling, logisch denken en praktische oplossingen combineert.</h2>
         <p>
           Ik bouw stap voor stap aan sterke digitale projecten, met aandacht voor duidelijke code,
           gebruiksvriendelijke interfaces en technische groei. Mijn portfolio laat zien wie ik ben,
@@ -45,39 +74,43 @@
           <a class="btn btn-secondary" href="contact.html">Neem contact op</a>
         </div>
 
-        <div class="skills-block">
-          <p class="skills-title">Skills</p>
-          <div class="home-skills" aria-label="Skills">
-            <button class="skill-badge skill-button active" type="button" data-skill="Structuur bouwen voor duidelijke, toegankelijke webpagina's.">HTML</button>
-            <button class="skill-badge skill-button" type="button" data-skill="Layouts, kleuren en responsive styling professioneel afwerken.">CSS</button>
-            <button class="skill-badge skill-button" type="button" data-skill="Interactie toevoegen, formulieren verbeteren en pagina's dynamischer maken.">JavaScript</button>
-            <button class="skill-badge skill-button" type="button" data-skill="Pagina's laten werken op mobiel, tablet en desktop.">Responsive design</button>
-            <button class="skill-badge skill-button" type="button" data-skill="Stap voor stap analyseren, testen en verbeteren.">Probleemoplossing</button>
-          </div>
-          <p class="skill-description" id="skillDescription" aria-live="polite">
-            Structuur bouwen voor duidelijke, toegankelijke webpagina's.
-          </p>
-        </div>
       </div>
 
       <aside class="profile-card" aria-label="Profiel van Imanredjo Nequille">
         <img src="img/all/profile-photo.jpg" alt="Portretfoto van Imanredjo Nequille">
-        <div>
-          <p class="profile-name">ICT-student</p>
-          <p>UNASAT HBO • Webontwikkeling • Future fullstack developer</p>
-        </div>
       </aside>
+    </section>
+
+    <section class="skills-section" aria-labelledby="skillsTitle">
+      <div class="section-intro">
+        <p class="eyebrow">Mijn basis</p>
+        <h2 id="skillsTitle">Skills waar ik aan bouw</h2>
+        <p>Klik op een skill om kort te zien hoe ik die toepas in mijn projecten.</p>
+      </div>
+
+      <div class="skills-block">
+        <div class="home-skills" aria-label="Skills">
+          <button class="skill-badge skill-button active" type="button" data-skill="Structuur bouwen voor duidelijke, toegankelijke webpagina's.">HTML</button>
+          <button class="skill-badge skill-button" type="button" data-skill="Layouts, kleuren en responsive styling professioneel afwerken.">CSS</button>
+          <button class="skill-badge skill-button" type="button" data-skill="Interactie toevoegen, formulieren verbeteren en pagina's dynamischer maken.">JavaScript</button>
+          <button class="skill-badge skill-button" type="button" data-skill="Pagina's laten werken op mobiel, tablet en desktop.">Responsive design</button>
+          <button class="skill-badge skill-button" type="button" data-skill="Stap voor stap analyseren, testen en verbeteren.">Probleemoplossing</button>
+        </div>
+        <p class="skill-description" id="skillDescription" aria-live="polite">
+          Structuur bouwen voor duidelijke, toegankelijke webpagina's.
+        </p>
+      </div>
     </section>
 
     <section class="home-grid" aria-label="Portfolio overzicht">
       <article class="summary-card">
-        <span>01</span>
+        <span>Over mij</span>
         <h3>Wie ik ben</h3>
         <p>Een leergierige ICT-student die graag logisch denkt, onderzoekt en blijft verbeteren.</p>
       </article>
 
       <article class="summary-card">
-        <span>02</span>
+        <span>Werkstijl</span>
         <h3>Wat ik doe</h3>
         <p>Ik werk aan webpagina's, interactieve functies en projecten waarin techniek praktisch wordt toegepast.</p>
       </article>
@@ -89,26 +122,32 @@
         <a href="work.html">Bekijk case study</a>
       </article>
     </section>
+
+    <section class="visual-strip" aria-label="Portfolio beelden">
+      <img src="img/all/air-gesture-prototype.jpg" alt="Prototype van Air Gesture Wall Switch" loading="lazy">
+      <img src="img/all/smyle-tree-planting-1.jpg" alt="SMYLe bomen planten project" loading="lazy">
+      <img src="img/all/air-gesture-result.jpg" alt="Eindresultaat van Air Gesture Wall Switch" loading="lazy">
+    </section>
   </main>
 
   <footer class="footer">
     <div class="footer-content">
       <div class="footer-links">
         <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html">Over mij</a>
         <a href="work.html">Projecten</a>
         <a href="contact.html">Contact</a>
       </div>
 
       <div class="footer-socials">
-        <a href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/logo.png/github.png" alt=""></a>
-        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/logo.png/linkedin.png" alt=""></a>
-        <a href="mailto:niquille5@gmail.com" aria-label="Email"><img src="img/logo.png/gmail.png" alt=""></a>
-        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/logo.png/instagram.png" alt=""></a>
-        <a href="https://wa.me/5978734186" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/logo.png/whatsapp.png" alt=""></a>
+        <a href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/social-icons/github.svg" alt=""></a>
+        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/social-icons/linkedin.svg" alt=""></a>
+        <a href="mailto:niquille5@gmail.com" aria-label="Email"><img src="img/social-icons/email.svg" alt=""></a>
+        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/social-icons/instagram.svg" alt=""></a>
+        <a href="https://wa.me/5978734186" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/social-icons/whatsapp.svg" alt=""></a>
       </div>
 
-      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; All Rights Reserved</p>
+      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; Alle rechten voorbehouden</p>
     </div>
   </footer>
   <script src="js/site.js"></script>

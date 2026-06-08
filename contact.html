@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Neem contact op met Imanredjo Nequille voor samenwerking, stagekansen of portfoliofeedback.">
   <title>Contact | Imanredjo Nequille</title>
+  <script src="js/theme-init.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/contact.css">
 </head>
@@ -15,18 +16,26 @@
   <header class="site-header">
     <a class="site-brand" href="index.html">Imanredjo Nequille</a>
     <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Menu openen">
-    <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true">
+    <label class="nav-toggle-label" for="nav-toggle" role="button" tabindex="0" aria-label="Menu openen" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
     </label>
     <nav class="main-nav" aria-label="Hoofdnavigatie">
       <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
       <a href="work.html">Projecten</a>
+      <a href="blog.html">Over mij</a>
       <a href="contact.html" class="active">Contact</a>
     </nav>
-    <button class="theme-toggle" type="button" aria-label="Dark mode aanzetten" aria-pressed="false">Dark mode</button>
+    <button class="theme-toggle" type="button" aria-label="Dark mode aanzetten" aria-pressed="false">
+      <span class="theme-toggle-track" aria-hidden="true">
+        <span class="theme-toggle-thumb">
+          <span class="theme-icon theme-icon-sun">☀</span>
+          <span class="theme-icon theme-icon-moon">☾</span>
+        </span>
+      </span>
+      <span class="theme-toggle-text">Dark mode</span>
+    </button>
   </header>
 
   <main class="page-shell">
@@ -38,13 +47,13 @@
 
     <div class="contact-page">
       <section class="contact-container contact-intro">
-        <p class="eyebrow">Direct bereikbaar</p>
-        <h2>Connect met mij</h2>
-        <p>Gebruik de snelste route die bij jou past. Voor serieuze vragen is mail of LinkedIn meestal het handigst.</p>
+        <p class="eyebrow">Bereikbaarheid</p>
+        <h2>Neem contact op</h2>
+        <p>Stuur mij een bericht via e-mail of WhatsApp. Voor school, stage of samenwerking reageer ik het liefst via mail.</p>
 
         <div class="contact-methods">
           <a class="contact-method" href="mailto:niquille5@gmail.com">
-            <img src="img/logo.png/gmail.png" alt="">
+            <img src="img/social-icons/email.svg" alt="">
             <span>
               <strong>Email</strong>
               <small>niquille5@gmail.com</small>
@@ -52,7 +61,7 @@
           </a>
 
           <a class="contact-method" href="https://wa.me/5978734186" target="_blank" rel="noopener">
-            <img src="img/logo.png/whatsapp.png" alt="">
+            <img src="img/social-icons/whatsapp.svg" alt="">
             <span>
               <strong>WhatsApp</strong>
               <small>Snelle reactie</small>
@@ -62,15 +71,15 @@
 
         <div class="socials" aria-label="Sociale profielen">
           <a class="social-link" href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub">
-            <img src="img/logo.png/github.png" alt="GitHub logo">
+            <img src="img/social-icons/github.svg" alt="GitHub logo">
           </a>
 
           <a class="social-link" href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <img src="img/logo.png/linkedin.png" alt="LinkedIn logo">
+            <img src="img/social-icons/linkedin.svg" alt="LinkedIn logo">
           </a>
 
           <a class="social-link" href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram">
-            <img src="img/logo.png/instagram.png" alt="Instagram logo">
+            <img src="img/social-icons/instagram.svg" alt="Instagram logo">
           </a>
         </div>
 
@@ -83,9 +92,8 @@
       </section>
 
       <section class="contact-container contact-form-card">
-        <p class="eyebrow">Bericht</p>
         <h2>Stuur een bericht</h2>
-        <p>Vertel kort wie je bent en waarmee ik kan helpen.</p>
+        <p>Laat je naam, e-mail en bericht achter. Dan kan ik gericht reageren.</p>
 
         <form
           class="contact-form"
@@ -125,20 +133,20 @@
     <div class="footer-content">
       <div class="footer-links">
         <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html">Over mij</a>
         <a href="work.html">Projecten</a>
         <a href="contact.html">Contact</a>
       </div>
 
       <div class="footer-socials">
-        <a href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/logo.png/github.png" alt=""></a>
-        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/logo.png/linkedin.png" alt=""></a>
-        <a href="mailto:niquille5@gmail.com" aria-label="Email"><img src="img/logo.png/gmail.png" alt=""></a>
-        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/logo.png/instagram.png" alt=""></a>
-        <a href="https://wa.me/5978734186" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/logo.png/whatsapp.png" alt=""></a>
+        <a href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/social-icons/github.svg" alt=""></a>
+        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/social-icons/linkedin.svg" alt=""></a>
+        <a href="mailto:niquille5@gmail.com" aria-label="Email"><img src="img/social-icons/email.svg" alt=""></a>
+        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/social-icons/instagram.svg" alt=""></a>
+        <a href="https://wa.me/5978734186" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/social-icons/whatsapp.svg" alt=""></a>
       </div>
 
-      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; All Rights Reserved</p>
+      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; Alle rechten voorbehouden</p>
     </div>
   </footer>
 

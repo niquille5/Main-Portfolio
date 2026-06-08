@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Projecten van Imanredjo Nequille: Air Gesture Wall Switch met ESP32 en SMYLe community project.">
   <title>Projecten | Imanredjo Nequille</title>
+  <script src="js/theme-init.js"></script>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/work.css">
 </head>
@@ -15,18 +16,26 @@
   <header class="site-header">
     <a class="site-brand" href="index.html">Imanredjo Nequille</a>
     <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Menu openen">
-    <label class="nav-toggle-label" for="nav-toggle" aria-hidden="true">
+    <label class="nav-toggle-label" for="nav-toggle" role="button" tabindex="0" aria-label="Menu openen" aria-expanded="false">
       <span></span>
       <span></span>
       <span></span>
     </label>
     <nav class="main-nav" aria-label="Hoofdnavigatie">
       <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
       <a href="work.html" class="active">Projecten</a>
+      <a href="blog.html">Over mij</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <button class="theme-toggle" type="button" aria-label="Dark mode aanzetten" aria-pressed="false">Dark mode</button>
+    <button class="theme-toggle" type="button" aria-label="Dark mode aanzetten" aria-pressed="false">
+      <span class="theme-toggle-track" aria-hidden="true">
+        <span class="theme-toggle-thumb">
+          <span class="theme-icon theme-icon-sun">☀</span>
+          <span class="theme-icon theme-icon-moon">☾</span>
+        </span>
+      </span>
+      <span class="theme-toggle-text">Dark mode</span>
+    </button>
   </header>
 
   <main class="page-shell work-wrapper">
@@ -100,21 +109,25 @@
 
       <section class="project-details" aria-label="Projectdetails">
         <div>
+          <span class="detail-icon" aria-hidden="true">!</span>
           <h3>Probleem</h3>
           <p>Een normale lichtschakelaar vraagt fysiek contact. Wij wilden onderzoeken hoe licht contactloos bediend kan worden.</p>
         </div>
 
         <div>
+          <span class="detail-icon" aria-hidden="true">/</span>
           <h3>Oplossing</h3>
           <p>Met sensoren en een ESP32 maakten we een prototype dat handbewegingen detecteert en daarop reageert.</p>
         </div>
 
         <div>
+          <span class="detail-icon" aria-hidden="true">+</span>
           <h3>Mijn rol</h3>
           <p>Ik werkte mee aan het testen, verbeteren en uitleggen van de technische werking binnen het team.</p>
         </div>
 
         <div>
+          <span class="detail-icon" aria-hidden="true">*</span>
           <h3>Wat ik leerde</h3>
           <p>Ik leerde beter logisch denken, testen met echte hardware en samenwerken aan een technische oplossing.</p>
         </div>
@@ -169,21 +182,25 @@
 
       <section class="project-details smyle-details" aria-label="SMYLe projectdetails">
         <div>
+          <span class="detail-icon" aria-hidden="true">+</span>
           <h3>Doel</h3>
           <p>Bijdragen aan een groenere omgeving in Suriname en jongeren betrekken bij maatschappelijke projecten.</p>
         </div>
 
         <div>
+          <span class="detail-icon" aria-hidden="true">/</span>
           <h3>Mijn rol</h3>
           <p>Ik nam actief deel aan het planten van bomen en werkte samen met andere vrijwilligers.</p>
         </div>
 
         <div>
+          <span class="detail-icon" aria-hidden="true">*</span>
           <h3>Resultaat</h3>
           <p>Er zijn bomen succesvol geplant en de samenwerking tussen jongeren werd versterkt.</p>
         </div>
 
         <div>
+          <span class="detail-icon" aria-hidden="true">!</span>
           <h3>Wat ik leerde</h3>
           <p>Ik leerde hoe teamwork, verantwoordelijkheid en kleine acties samen grote impact kunnen hebben.</p>
         </div>
@@ -200,20 +217,20 @@
     <div class="footer-content">
       <div class="footer-links">
         <a href="index.html">Home</a>
-        <a href="blog.html">Blog</a>
+        <a href="blog.html">Over mij</a>
         <a href="work.html">Projecten</a>
         <a href="contact.html">Contact</a>
       </div>
 
       <div class="footer-socials">
-        <a href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/logo.png/github.png" alt=""></a>
-        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/logo.png/linkedin.png" alt=""></a>
-        <a href="mailto:niquille5@gmail.com" aria-label="Email"><img src="img/logo.png/gmail.png" alt=""></a>
-        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/logo.png/instagram.png" alt=""></a>
-        <a href="https://wa.me/5978734186" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/logo.png/whatsapp.png" alt=""></a>
+        <a href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/social-icons/github.svg" alt=""></a>
+        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/social-icons/linkedin.svg" alt=""></a>
+        <a href="mailto:niquille5@gmail.com" aria-label="Email"><img src="img/social-icons/email.svg" alt=""></a>
+        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/social-icons/instagram.svg" alt=""></a>
+        <a href="https://wa.me/5978734186" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/social-icons/whatsapp.svg" alt=""></a>
       </div>
 
-      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; All Rights Reserved</p>
+      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; Alle rechten voorbehouden</p>
     </div>
   </footer>
 
