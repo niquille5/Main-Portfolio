@@ -1566,6 +1566,11 @@ html[data-theme="dark"] .page-nav a:hover {
     transition-delay: 0.16s;
   }
 
+  .nav-toggle:checked ~ .main-nav a:nth-child(5),
+  .main-nav.is-open a:nth-child(5) {
+    transition-delay: 0.2s;
+  }
+
   .nav-toggle-label span {
     border-radius: 999px;
     transition:

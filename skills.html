@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Gamified skill tree van Imanredjo Nequille: ICT-skills, XP, levels en toekomstige fullstack doelen.">
+  <title>Skills | Imanredjo Nequille</title>
+  <script src="js/theme-init.js"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/skills.css?v=skills-compact">
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="site-brand" href="index.html">Imanredjo Nequille</a>
+    <input class="nav-toggle" type="checkbox" id="nav-toggle" aria-label="Menu openen">
+    <label class="nav-toggle-label" for="nav-toggle" role="button" tabindex="0" aria-label="Menu openen" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <nav class="main-nav" aria-label="Hoofdnavigatie">
+      <a href="index.html">Home</a>
+      <a href="work.html">Projecten</a>
+      <a href="blog.html">Over mij</a>
+      <a href="skills.html" class="active">Skills</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="theme-toggle" type="button" aria-label="Dark mode aanzetten" aria-pressed="false">
+      <span class="theme-toggle-track" aria-hidden="true">
+        <span class="theme-toggle-thumb">
+          <span class="theme-icon theme-icon-sun">☀</span>
+          <span class="theme-icon theme-icon-moon">☾</span>
+        </span>
+      </span>
+      <span class="theme-toggle-text">Dark mode</span>
+    </button>
+  </header>
+
+  <main class="page-shell skill-tree-page">
+    <section class="page-hero skill-tree-hero">
+      <h1>ICT SKILL TREE</h1>
+      <p>Mijn groei als ICT-student richting fullstack developer.</p>
+      <p>Hier zie je welke skills ik al heb ontwikkeld, waar ik nu aan werk en wat ik later wil leren.</p>
+    </section>
+
+    <section class="skill-game-layout" aria-label="Interactieve skill tree">
+      <div class="skill-tree-stage" id="skillTree" aria-live="polite">
+        <div class="tree-particles" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="tree-spine" aria-hidden="true"></div>
+      </div>
+
+      <aside class="skill-detail-panel" aria-labelledby="skillDetailTitle">
+        <div class="skill-detail-header">
+          <span class="skill-detail-icon" id="skillDetailIcon" aria-hidden="true">SK</span>
+          <div>
+            <p class="eyebrow">Skill Info</p>
+            <h2 id="skillDetailTitle">Selecteer een skill</h2>
+          </div>
+        </div>
+
+        <p id="skillDetailText">Klik op een node om details te bekijken.</p>
+
+        <div class="skill-detail-progress" aria-label="Learning progress">
+          <span class="detail-progress-ring" aria-hidden="true">
+            <span class="detail-progress-core" id="skillDetailProgress">0%</span>
+          </span>
+          <div>
+            <span class="detail-progress-label">Learning progress</span>
+            <strong id="skillDetailProgressText">0%</strong>
+          </div>
+        </div>
+
+        <div class="skill-detail-badges">
+          <span class="detail-status-badge" id="skillDetailStatus">Status</span>
+          <span class="detail-category-pill" id="skillDetailCategory">Categorie</span>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Over mij</a>
+        <a href="work.html">Projecten</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-socials">
+        <a href="https://github.com/niquille5" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/social-icons/github.svg" alt=""></a>
+        <a href="https://www.linkedin.com/in/niquille-imanredjo-048897373/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/social-icons/linkedin.svg" alt=""></a>
+        <a href="mailto:niquille5@gmail.com" aria-label="Email"><img src="img/social-icons/email.svg" alt=""></a>
+        <a href="https://www.instagram.com/nicck_k_k" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/social-icons/instagram.svg" alt=""></a>
+        <a href="https://wa.me/5978734186" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="img/social-icons/whatsapp.svg" alt=""></a>
+      </div>
+
+      <p class="footer-text">&copy; 2026 Imanredjo Nequille &bull; Alle rechten voorbehouden</p>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script src="js/skills.js?v=skills-compact"></script>
+</body>
+
+</html>

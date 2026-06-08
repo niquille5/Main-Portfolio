@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { file: "index.html", label: "Home" },
     { file: "work.html", label: "Projecten" },
     { file: "blog.html", label: "Over mij" },
+    { file: "skills.html", label: "Skills" },
     { file: "contact.html", label: "Contact" },
   ];
   const siteHeader = document.querySelector(".site-header");
